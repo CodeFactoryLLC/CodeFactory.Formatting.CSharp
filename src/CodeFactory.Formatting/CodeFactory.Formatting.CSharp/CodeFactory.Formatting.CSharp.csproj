@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89050BA1-6328-4A5F-981D-AF9ED7C7983C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeFactory.Formatting.CSharp</RootNamespace>
+    <AssemblyName>CodeFactory.Formatting.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ddb4eb5aaae6a7c, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeFactorySDK.1.0.202301\lib\net472\CodeFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFactory.DotNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ddb4eb5aaae6a7c, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeFactorySDK.1.0.202301\lib\net472\CodeFactory.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFactory.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6ebe0889dadef152, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeFactorySDK.1.0.202301\lib\net472\CodeFactory.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFactory.VisualStudio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ddb4eb5aaae6a7c, processorArchitecture=MSIL">
+      <HintPath>..\packages\CodeFactorySDK.1.0.202301\lib\net472\CodeFactory.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsAttributeExtensions.cs" />
+    <Compile Include="CsAttributeParameterExtensions.cs" />
+    <Compile Include="CsAttributeParameterValueExtensions.cs" />
+    <Compile Include="CsClassExtensions.cs" />
+    <Compile Include="CsEnumExtensions.cs" />
+    <Compile Include="CsEventExtensions.cs" />
+    <Compile Include="CsFieldExtensions.cs" />
+    <Compile Include="CsGenericParameterExtensions.cs" />
+    <Compile Include="CsInterfaceExtensions.cs" />
+    <Compile Include="CsMethodExtensions.cs" />
+    <Compile Include="CsParameterDefaultValueExtensions.cs" />
+    <Compile Include="CsParameterExtensions.cs" />
+    <Compile Include="CsPropertyExtensions.cs" />
+    <Compile Include="CsSecurityExtensions.cs" />
+    <Compile Include="CsSourceExtensions.cs" />
+    <Compile Include="CsStructureExtensions.cs" />
+    <Compile Include="CsTypeExtensions.cs" />
+    <Compile Include="CsUsingStatementExtensions.cs" />
+    <Compile Include="DocumentationExtensions.cs" />
+    <Compile Include="NamespaceManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CsSourceFormatter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeFactory.Formatting.CSharp.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
