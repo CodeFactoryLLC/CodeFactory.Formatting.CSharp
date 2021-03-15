@@ -2,19 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd" >
   <metadata>
     <id>CodeFactory.Formatting.CSharp</id>
-    <version>0.90.202401</version>
+    <version>1.21068.1</version>
     <title>Code Factory Formatting Library for C#</title>
     <authors>CodeFactory, LLC.</authors>
     <owners>CodeFactory, LLC.</owners>
     <license type="expression">MIT</license>
-    <projectUrl>https://www.codefactory.software/</projectUrl>
+    <projectUrl>https://github.com/CodeFactoryLLC/CodeFactory.Formatting.CSharp</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Extension libraries that provide formatters for code factory models to C#</description>
-    <releaseNotes>Defect fixes for issue #13 source formatter fix and issue #14 Async keyword creating new line on method signature generation.</releaseNotes>
-    <copyright>Copyright 2020</copyright>
+    <releaseNotes>Updated to support CodeFactory SDK 1.21068.1</releaseNotes>
+    <copyright>Copyright 2021 CodeFactory, LLC.</copyright>
     <tags>Factory Automation C#</tags>
     <dependencies>
-      <dependency id="CodeFactorySDK" version="1.0.202301"/>
+      <dependency id="CodeFactorySDK" version="1.21068.1"/>
     </dependencies>
   </metadata>
 </package>
